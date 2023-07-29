@@ -1,3 +1,3 @@
 # virtuemart_atome
-Atome Virtumart payment gateway For joomla 3
+Atome Virtumart payment gateway for Joomla 3
 
