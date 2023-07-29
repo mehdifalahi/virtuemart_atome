@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.x" type="plugin" group="vmpayment" method="upgrade">
+    <name>Atome Payment GateWay</name>
+    <creationDate>2023</creationDate>
+    <author>Mehdi Falahi</author>
+    <authorUrl>faddons.com</authorUrl>
+    <copyright>faddons.com</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description></description>
+    <files>
+        <filename plugin="virtuemart_atome">virtuemart_atome.php</filename>
+        <filename>virtuemart_atome.xml</filename>
+        <filename>index.html</filename>
+		<folder>language</folder>
+    </files>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/elements">
+                <field type="spacer" name="spacer" label=" "/>
+				
+                <field type="text" name="username" label="VMPAYMENT_ATOME_USERNAME" />
+                <field type="text" name="password" label="VMPAYMENT_ATOME_PASSWORD"/>
+                <field type="text" name="currency" label="VMPAYMENT_ATOME_CURRENCY" description="VMPAYMENT_ATOME_CURRENCY_TIP"/>
+                <field type="list" name="type" label="VMPAYMENT_ATOME_TYPE">
+					<option value="test">VMPAYMENT_ATOME_TYPE_TEST</option>
+					<option value="live">VMPAYMENT_ATOME_TYPE_PRODUCTION</option>
+				</field>
+				
+                <field type="vmtitle" default="VMPAYMENT_ATOME_BASIC_PARAMS" description=""/>
+				
+                <field name="status_pending" type="vmorderstate" scope="com_virtuemart" default="U"
+                           label="VMPAYMENT_ATOME_STATUS_PENDING" description="VMPAYMENT_ATOME_STATUS_PENDING_TIP" />
+                <field name="status_success" type="vmorderstate" scope="com_virtuemart" default="C"
+                       label="VMPAYMENT_ATOME_STATUS_SUCCESS" description="VMPAYMENT_ATOME_STATUS_SUCCESS_TIP" />
+                <field name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X"
+                       label="VMPAYMENT_ATOME_STATUS_CANCEL" description="VMPAYMENT_ATOME_STATUS_CANCEL_TIP" />				
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
